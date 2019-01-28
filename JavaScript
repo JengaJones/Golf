@@ -1,0 +1,28 @@
+// Using Java Script
+var golfStroke = ["Hole-In-One", "Eagle", "Birdie", "Par", "Bogey", "Double-Bogey", "Not Good"];
+function golfScore(par, stroke)
+{
+    if (stroke == 1){
+        return golfStroke[0];
+    }
+    else if (stroke <= par - 2){
+        return golfStroke[1];
+    }
+    else if (stroke == par - 1){
+        return golfStroke[2];
+    }
+    else if (stroke == par){
+        return golfStroke[3];
+    }
+    else if (stroke == par + 1){
+        return golfStroke[4];
+    }
+    else if (stroke == par + 2){
+        return golfStroke[5];
+    }
+    else if (stroke >= par + 3){
+        return golfStroke[6];
+    }      
+}
+
+console.log(golfScore(3,5));
